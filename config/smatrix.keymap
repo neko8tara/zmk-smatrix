@@ -66,32 +66,6 @@
             tap-ms = <10>;
         };
 
-        macro_w_sshot: macro_w_sshot {
-            compatible = "zmk,behavior-macro";
-            label = "Win Screenshot Macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI &kp LSHFT>,
-                <&macro_tap>,
-                <&kp S>,
-                <&macro_release>,
-                <&kp LGUI &kp LSHFT>;
-        };
-
-        macro_m_sshot: macro_m_sshot {
-            compatible = "zmk,behavior-macro";
-            label = "Mac Screenshot Macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI &kp LSHFT>,
-                <&macro_tap>,
-                <&kp N4>,
-                <&macro_release>,
-                <&kp LGUI &kp LSHFT>;
-        };
-
         macro_w_TMute: macro_w_TMute {
             compatible = "zmk,behavior-macro";
             label = "Win Teams Mic Mute";
@@ -104,9 +78,102 @@
                 <&macro_release>,
                 <&kp LGUI &kp LALT>;
         };
+
+        pw1: pw1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(U) &kp J &kp C &kp DOT &kp N3 &kp N0 &kp N7 &kp N0 &kp EXCL>;
+            label = "PW1";
+        };
+
+        pw2: pw2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(U) &kp J &kp C &kp DOT &kp N2 &kp N0 &kp N2 &kp N6 &kp N0 &kp N5 &kp N0 &kp N1>;
+            label = "PW2";
+        };
     };
 
     macros {
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Ctrl+A {
+            bindings = <&kp LC(A)>;
+            key-positions = <13 25>;
+        };
+
+        Ctrl+C {
+            bindings = <&kp LC(C)>;
+            key-positions = <27 41>;
+        };
+
+        Ctrl+F {
+            bindings = <&kp LC(F)>;
+            key-positions = <16 28>;
+        };
+
+        Ctrl+H {
+            bindings = <&kp LC(H)>;
+            key-positions = <18 32>;
+        };
+
+        Ctrl+Shift+L {
+            bindings = <&kp LC(LS(L))>;
+            key-positions = <22 36>;
+        };
+
+        Ctrl+B {
+            bindings = <&kp LC(B)>;
+            key-positions = <29 42>;
+        };
+
+        Ctrl+P {
+            bindings = <&kp LC(P)>;
+            key-positions = <10 22>;
+        };
+
+        Ctrl+R {
+            bindings = <&kp LC(R)>;
+            key-positions = <4 16>;
+        };
+
+        Ctrl+S {
+            bindings = <&kp LC(S)>;
+            key-positions = <13 25>;
+        };
+
+        Ctrl+T {
+            bindings = <&kp LC(T)>;
+            key-positions = <5 17>;
+        };
+
+        Ctrl+V {
+            bindings = <&kp LC(V)>;
+            key-positions = <28 41>;
+        };
+
+        Ctrl+W {
+            bindings = <&kp LC(W)>;
+            key-positions = <2 14>;
+        };
+
+        Ctrl+X {
+            bindings = <&kp LC(X)>;
+            key-positions = <26 40>;
+        };
+
+        Ctrl+Y {
+            bindings = <&kp LC(Y)>;
+            key-positions = <6 18>;
+        };
+
+        Ctrl+Z {
+            bindings = <&kp LC(Z)>;
+            key-positions = <25 39>;
+        };
     };
 
     keymap {
@@ -127,10 +194,10 @@
 
         layer_1 {
             bindings = <
-&trans  &kp PERCENT  &kp N7        &kp N8           &kp N9        &kp ASTERISK                    &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE  &kp PIPE       &trans
-&trans  &kp DOT      &kp NUMBER_4  &kp N5           &kp NUMBER_6  &kp PLUS                        &kp SQT            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET  &kp BACKSLASH  &trans
-&trans  &kp N0       &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3  &kp SLASH     &trans    &trans  &kp AT_SIGN        &kp AMPERSAND         &kp HASH               &kp GRAVE  &kp PAGE_UP    &trans
-&trans  &trans       &trans        &kp EXCLAMATION  &none         &trans                          &trans             &trans                &trans                 &kp HOME   &kp PAGE_DOWN  &kp END
+&trans  &kp PERCENT    &kp N7        &kp N8           &kp N9        &kp ASTERISK                  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE  &kp PIPE       &trans
+&trans  &kp DOT        &kp NUMBER_4  &kp N5           &kp NUMBER_6  &kp PLUS                      &kp SQT            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET  &kp BACKSLASH  &trans
+&trans  &kp N0         &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3  &kp SLASH     &none    &none  &kp AT_SIGN        &kp AMPERSAND         &kp HASH               &kp GRAVE  &kp PAGE_UP    &trans
+&trans  &kp SEMICOLON  &kp COLON     &kp EXCLAMATION  &none         &none                         &none              &trans                &trans                 &kp HOME   &kp PAGE_DOWN  &kp END
             >;
 
             sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_UP SCRL_DOWN>;
@@ -140,7 +207,7 @@
             bindings = <
 &none  &none  &none  &none  &none  &none                  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
 &none  &none  &none  &none  &none  &none                  &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none  &none  &none  &none  &none  &none  &none    &none  &none  &kp F1  &kp F2   &kp F3   &kp F4   &none
+&none  &none  &pw1   &pw2   &none  &none  &none    &none  &none  &kp F1  &kp F2   &kp F3   &kp F4   &none
 &none  &none  &none  &none  &none  &none                  &none  &none   &none    &none    &none    &none
             >;
 
@@ -149,10 +216,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_ASTERISK  &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_PLUS      &kp KP_SLASH
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans     &trans     &kp COMMA  &kp KP_DOT       &kp COLON
+&none  &none  &none  &none  &none  &none                  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none  &none  &none  &none  &none  &kp COLON
             >;
 
             sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_click MB5 MB4>;
@@ -160,10 +227,10 @@
 
         layer_4 {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                          &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans                                &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans          &bt BT_CLR    &trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &bt BT_CLR_ALL                        &trans   &trans  &trans  &trans  &trans  &trans
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &none  &none  &none  &none  &none  &none
+&none  &none         &none         &none         &none         &none                                &none  &none  &none  &none  &none  &none
+&none  &none         &none         &none         &none         &none           &bt BT_CLR    &none  &none  &none  &none  &none  &none  &none
+&none  &none         &none         &none         &none         &bt BT_CLR_ALL                       &none  &none  &none  &none  &none  &none
             >;
 
             sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &rot_kp PG_UP PG_DN>;
