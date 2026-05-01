@@ -100,77 +100,77 @@
     combos {
         compatible = "zmk,combos";
 
-        Ctrl+A {
+        CtrlA {
             bindings = <&kp LC(A)>;
             key-positions = <13 25>;
         };
 
-        Ctrl+C {
+        CtrlC {
             bindings = <&kp LC(C)>;
             key-positions = <27 41>;
         };
 
-        Ctrl+F {
+        CtrlF {
             bindings = <&kp LC(F)>;
             key-positions = <16 28>;
         };
 
-        Ctrl+H {
+        CtrlH {
             bindings = <&kp LC(H)>;
             key-positions = <18 32>;
         };
 
-        Ctrl+Shift+L {
+        CtrlShiftL {
             bindings = <&kp LC(LS(L))>;
             key-positions = <22 36>;
         };
 
-        Ctrl+B {
+        CtrlB {
             bindings = <&kp LC(B)>;
             key-positions = <29 42>;
         };
 
-        Ctrl+P {
+        CtrlP {
             bindings = <&kp LC(P)>;
             key-positions = <10 22>;
         };
 
-        Ctrl+R {
+        CtrlR {
             bindings = <&kp LC(R)>;
             key-positions = <4 16>;
         };
 
-        Ctrl+S {
+        CtrlS {
             bindings = <&kp LC(S)>;
             key-positions = <13 25>;
         };
 
-        Ctrl+T {
+        CtrlT {
             bindings = <&kp LC(T)>;
             key-positions = <5 17>;
         };
 
-        Ctrl+V {
+        CtrlV {
             bindings = <&kp LC(V)>;
             key-positions = <28 41>;
         };
 
-        Ctrl+W {
+        CtrlW {
             bindings = <&kp LC(W)>;
             key-positions = <2 14>;
         };
 
-        Ctrl+X {
+        CtrlX {
             bindings = <&kp LC(X)>;
             key-positions = <26 40>;
         };
 
-        Ctrl+Y {
+        CtrlY {
             bindings = <&kp LC(Y)>;
             key-positions = <6 18>;
         };
 
-        Ctrl+Z {
+        CtrlZ {
             bindings = <&kp LC(Z)>;
             key-positions = <25 39>;
         };
