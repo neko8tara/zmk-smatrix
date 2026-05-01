@@ -120,7 +120,9 @@
 &kp LCTRL   &kp LEFT_WIN  &kp LEFT_ALT  &kp QUESTION  &lt 1 SPACE  &lt 3 LANG2                            &lt 4 LANG1  &lt 2 BACKSPACE  &kp DEL    &kp LEFT    &kp DOWN   &kp RIGHT
             >;
 
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings =
+                <&rot_kp C_VOL_UP C_VOL_DN>,
+                <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         layer_1 {
