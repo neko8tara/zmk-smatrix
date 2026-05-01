@@ -200,7 +200,9 @@
 &trans  &kp SEMICOLON  &kp COLON     &kp EXCLAMATION  &none         &none                         &none              &trans                &trans                 &kp HOME   &kp PAGE_DOWN  &kp END
             >;
 
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings =
+                <&rot_kp C_VOL_UP C_VOL_DN>,
+                <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         layer_2 {
