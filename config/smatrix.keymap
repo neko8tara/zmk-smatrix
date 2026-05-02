@@ -201,14 +201,14 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE  &kp Q         &kp W         &kp E         &kp R        &kp T                                  &kp Y        &kp U            &kp I      &kp O       &kp P      &kp BACKSPACE
-&kp TAB     &kp A         &kp S         &kp D         &kp F        &kp G                                  &kp H        &kp J            &kp K      &kp L       &kp MINUS  &kp ENTER
-&kp LSHFT   &kp Z         &kp X         &kp C         &kp V        &kp B        &macro_w_TMute    &tog 1  &kp N        &kp M            &kp COMMA  &kp PERIOD  &kp UP     &kp EQUAL
-&kp LCTRL   &kp LEFT_WIN  &kp LEFT_ALT  &kp QUESTION  &lt 1 SPACE  &lt 0 LANG2                            &lt 3 LANG1  &lt 2 BACKSPACE  &kp DEL    &kp LEFT    &kp DOWN   &kp RIGHT
+&kp ESCAPE  &kp Q         &kp W         &kp E         &kp R        &kp T                                     &kp Y      &kp U            &kp I      &kp O       &kp P      &kp BACKSPACE
+&kp TAB     &kp A         &kp S         &kp D         &kp F        &kp G                                     &kp H      &kp J            &kp K      &kp L       &kp MINUS  &kp ENTER
+&kp LSHFT   &kp Z         &kp X         &kp C         &kp V        &kp B           &macro_w_TMute    &tog 1  &kp N      &kp M            &kp COMMA  &kp PERIOD  &kp UP     &kp EQUAL
+&kp LCTRL   &kp LEFT_WIN  &kp LEFT_ALT  &kp QUESTION  &lt 1 SPACE  &kp LANGUAGE_2                            &kp LANG1  &lt 2 BACKSPACE  &kp DEL    &kp LEFT    &kp DOWN   &kp RIGHT
             >;
 
             sensor-bindings =
-                <&mouse_scrl SCRL_LEFT SCRL_RIGHT>,
+                <&rot_kp LC(PAGE_UP) LC(PAGE_DOWN)>,
                 <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
