@@ -92,6 +92,20 @@
             bindings = <&kp LS(U) &kp J &kp C &kp DOT &kp N2 &kp N0 &kp N2 &kp N6 &kp N0 &kp N5 &kp N0 &kp N1>;
             label = "PW2";
         };
+
+        PasteFormula: PasteFormula {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(V)) &kp F &kp ENTER>;
+            label = "PASTEFORMULA";
+        };
+
+        PasteFormat: PasteFormat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(V)) &kp T &kp RET>;
+            label = "PASTEFORMAT";
+        };
     };
 
     macros {
@@ -192,7 +206,17 @@
 
         CtrlShiftV {
             bindings = <&kp LS(LC(V))>;
+            key-positions = <28 29>;
+        };
+
+        PasteFormula {
+            bindings = <&PasteFormula>;
             key-positions = <28 42>;
+        };
+
+        PasteFormat {
+            bindings = <&PasteFormat>;
+            key-positions = <28 43>;
         };
     };
 
@@ -209,7 +233,7 @@
 
             sensor-bindings =
                 <&rot_kp LC(PAGE_UP) LC(PAGE_DOWN)>,
-                <&mouse_scrl SCRL_DOWN SCRL_UP>;
+                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         layer_1 {
