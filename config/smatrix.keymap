@@ -233,7 +233,7 @@
 
             sensor-bindings =
                 <&rot_kp LC(PAGE_UP) LC(PAGE_DOWN)>,
-                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+                <&inc_dec_kp C_VOL_DN C_VOLUME_UP>;
         };
 
         layer_1 {
